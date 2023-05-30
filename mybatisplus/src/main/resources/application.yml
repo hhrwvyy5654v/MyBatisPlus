@@ -1,0 +1,17 @@
+spring:
+  datasource: # 数据源配置
+    type: com.zaxxer.hikari.HikariDataSource  # 配置数据源类型
+    driver-class-name: com.mysql.cj.jdbc.Driver # 配置数据库连接驱动
+    url: jdbc:mysql://localhost:3306/mybatis_plus?serverTimezone=GMT%2B8&characterEncoding=utf-8&userSSL=false # 数据库连接URL
+    username: root  # 数据库用户名
+    password: root  # 数据库密码
+
+mybatis-plus: # MyBatis-Plus配置
+  configuration: # MyBatis-Plus的配置项，用于配置MyBatis-Plus的全局配置
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 设置MyBatis-Plus的日志实现类为StdOutImpl，表示将SQL语句输出到控制台
+    global-config: # MyBatis-Plus的全局配置,应用于所有的Mapper接口
+      db-config: # 配置数据库相关的全局配置
+        table-prefix: t_ # 指定数据库表名的前缀，可以避免不同模块或业务之间产生表名冲突的问题
+        id-type: auto # 指定ID的生成策略为auto，表示ID的生成策略是自动递增
+    type-aliases-package: org.example.mybatis_plus_demo.pojo # 实体类的包名，用于指定实体类的包路径
+    type-enums-package: org.example.mybatis_plus_demo.enums # 枚举类的包名，用于指定枚举类的包路径
