@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--这是一个MyBatis的Mapper映射文件，用于将Java方法映射到SQL语句-->
+<mapper namespace="com.example.mybatisplus.mapper.UserMapper">
+
+    <!--根据用户id查询用户信息-->
+    <select id="selectMapById" resultType="map">
+        select id, name, age, email
+        from user
+        where id = #{id}
+    </select>
+
+    <!--分页查询用户信息:使用select语句查询t_user表中所有年龄大于指定值的记录，
+    并将查询结果映射到一个User对象中，再将所有User对象放入一个Page对象中返回-->
+    <select id="selectPageVo" resultType="User">
+        select uid, user_name, age, email
+        from user
+        where age > #{age}
+    </select>
+
+</mapper>
