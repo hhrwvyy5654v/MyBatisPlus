@@ -15,16 +15,16 @@ import java.util.Map;
  * @Datetime: 2023/05/30 15:01
  * @Author: HuangRongQuan
  * @Email: rongquanhuang01@gmail.com
- * @Description:
+ * @Description: 一个用户数据访问口接的层
  */
 
-@Repository // Spring Framework中的注解之一,用于标识一个类为数据访问对象（DAO）,并将其注册到 Spring 容器中
-// 继承MyBatis Plus提供的BaseMapper接口
+@Repository // Spring Framework中的注解之一,用于标识一个类为数据访问对象（DAO）,并将其注册到 Spring 容器中,表示这是一个用于数据访问的仓库类
+// UserMapper继承了BaseMapper<User>，这是一个MyBatis-Plus提供的基础Mapper接口，用于提供一些基本的数据库操作方法
 public interface UserMapper extends BaseMapper<User> {
     // 根据用户id查询用户信息，并返回一个Map对象
     Map<String, Object> selectMapById(Long id);
 
-    // 分页查询用户信息，并返回一个Page对象
+    // 通过年龄查询用户信息并进行分页，并返回一个Page对象
     Page<User> selectPageVo(@Param("page") Page<User> page, @Param("age") Integer age);
 }
 

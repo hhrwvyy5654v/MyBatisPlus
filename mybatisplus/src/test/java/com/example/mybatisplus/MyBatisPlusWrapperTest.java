@@ -21,11 +21,14 @@ import java.util.Map;
  * @Datetime: 2023/06/01 15:42
  * @Author: HuangRongQuan
  * @Email: rongquanhuang01@gmail.com
- * @Description:
+ * @Description: 一个使用 MyBatis Plus 的 QueryWrapper 进行数据库查询和操作的测试类
  */
 
-@SpringBootTest
+
+@SpringBootTest(classes = MybatisplusApplication.class) // 注解表示这是一个 Spring Boot 的集成测试类，它会加载整个应用程序的上下文
+
 public class MyBatisPlusWrapperTest {
+    // 注解用于自动注入 UserMapper 对象，它是一个 MyBatis Plus 自动生成的 Mapper 接口，用于执行数据库操作
     @Autowired
     private UserMapper userMapper;
 

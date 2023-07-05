@@ -14,10 +14,11 @@ import lombok.Data;
  * @Datetime: 2023/05/30 14:29
  * @Author: HuangRongQuan
  * @Email: rongquanhuang01@gmail.com
- * @Description:
+ * @Description: 一个用户实体类,名为User,定义了用户的属性和对应的数据库表字段
  */
 @Data //Lombok的注解，用于自动生成实体类的getter、setter、toString等方法
 @TableName("t_user")    //指定实体类所对应的表名为“t_user”
+
 public class User {
     // @TableId(value = "uid", type = IdType.AUTO)
     // value属性用于指定主键的字段,type属性设置主键生成策略

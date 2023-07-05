@@ -10,7 +10,7 @@ import lombok.Getter;
  * @Datetime: 2023/05/30 14:32
  * @Author: HuangRongQuan
  * @Email: rongquanhuang01@gmail.com
- * @Description:
+ * @Description: 定义了一个枚举类SexEnum,用于表示性别
  */
 
 @Getter //自动生成sex和sexName的getter方法,可以在其他地方通过枚举值获取对应的属性值
