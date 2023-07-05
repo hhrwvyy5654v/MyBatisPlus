@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <!--Maven模型的版本号-->
     <modelVersion>4.0.0</modelVersion>
     <!--父项目的配置，表示项目是一个子项目-->
@@ -12,7 +13,7 @@
         <!--父项目的版本号，表示使用的父项目版本-->
         <version>2.6.3</version>
         <!--父项目的相对路径，表示父项目的pom.xml文件相对于当前项目的路径-->
-        <relativePath/>
+        <relativePath />
     </parent>
 
     <!--项目的唯一标识符-->
@@ -34,13 +35,15 @@
 
     <dependencies>
         <dependency>
-            <!--Spring Boot的核心依赖库，包含了Spring框架的基本功能和常用的扩展库-->
+            <!--Spring
+            Boot的核心依赖库，包含了Spring框架的基本功能和常用的扩展库-->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
-            <!--用于编写和运行测试的Spring Boot依赖库-->
+            <!--用于编写和运行测试的Spring
+            Boot依赖库-->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -90,7 +93,8 @@
             <plugin>
                 <!--插件所属的组项目-->
                 <groupId>org.springframework.boot</groupId>
-                <!--一个Spring Boot Maven插件，用于将项目包成可的其他一的功能。-->
+                <!--一个Spring
+                Boot Maven插件，用于将项目包成可的其他一的功能。-->
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
