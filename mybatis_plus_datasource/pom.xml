@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--Maven模型的版本号-->
+    <modelVersion>4.0.0</modelVersion>
+    <!--父项目的配置，表示项目是一个子项目-->
+    <parent>
+        <!--父项目的groupId，表示父项目的唯一标识符-->
+        <groupId>org.springframework.boot</groupId>
+        <!--父项目的artifactId，表示父项目的唯一标识符-->
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <!--父项目的版本号，表示使用的父项目版本-->
+        <version>3.1.1</version>
+        <!--父项目的相对路径，表示父项目的pom.xml文件相对于当前项目的路径-->
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!--项目的唯一标识符-->
+    <groupId>com.example</groupId>
+    <!--项目名称-->
+    <artifactId>mybatis_plus_datasource</artifactId>
+    <!--项目的版本号-->
+    <version>0.0.1-SNAPSHOT</version>
+    <!--项目名称-->
+    <name>mybatis_plus_datasource</name>
+    <!--项目描述-->
+    <description>Demo project for Spring Boot</description>
+
+    <!--用于定义项目的属性-->
+    <properties>
+        <!--定义Java版本-->
+        <java.version>17</java.version>
+    </properties>
+
+    <dependencies>
+        <!--Spring Boot的核心依赖库，包含了Spring框架的基本功能和常用的扩展库-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--用于编写和运行测试的Spring Boot依赖库-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--Batis器化Myatis配置和提供更多的功能和便利-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+
+        <!--一个Java库，用于简化实体类的开发，通过注解自动生成getter、等方法，减少了冗余的代码-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--MySQL数据库的Java驱动程序，用于连接和操作MySQL数据库-->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.31</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--MyBatis-Plus的代码生成器，可以根据数据库表结构自动生成实体类、Mapper接口和XML映射-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+    </dependencies>
+
+    <!--Maven构建配置文件的根元素，用于配置项目的构建相关信息-->
+    <build>
+        <plugins>
+            <plugin>
+                <!--插件所属的组项目-->
+                <groupId>org.springframework.boot</groupId>
+                <!--一个Spring Boot Maven插件，用于将项目包成可的其他一的功能。-->
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
